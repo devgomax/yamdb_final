@@ -1,7 +1,7 @@
 import os
 
-from django.core.mail import send_mail
 from django.contrib.auth.tokens import default_token_generator
+from django.core.mail import send_mail
 from dotenv import load_dotenv
 from rest_framework import permissions, status, viewsets
 from rest_framework.decorators import action, api_view

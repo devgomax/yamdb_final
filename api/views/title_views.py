@@ -2,6 +2,7 @@ from django.db.models import Avg
 from rest_framework import viewsets
 
 from users.permissions import IsAdministratorOrReadOnly
+
 from ..filters import TitleFilter
 from ..models.title import Title
 from ..serializers.title_serializer import (TitleCreateSerializer,
