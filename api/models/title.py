@@ -1,8 +1,8 @@
 from django.db import models
 
+from ..validators import no_future
 from .category import Category
 from .genre import Genre
-from ..validators import no_future
 
 
 class Title(models.Model):
