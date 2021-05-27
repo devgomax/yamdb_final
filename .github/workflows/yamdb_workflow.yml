@@ -40,7 +40,7 @@ jobs:
         uses: docker/build-push-action@v2 # Выполняет push образа в DockerHub 
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_web:v1
+          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb-web:v1
 
   deploy:
     runs-on: ubuntu-latest
