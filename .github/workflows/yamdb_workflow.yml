@@ -56,7 +56,7 @@ jobs:
         script: |
             sudo docker-compose stop
             sudo docker-compose rm web
-            sudo docker rmi ${{ secrets.DOCKER_USERNAME }}/yamdb-web:latest
+            sudo docker rmi -f ${{ secrets.DOCKER_USERNAME }}/yamdb-web:latest
             # Создаст файл для переменных окружения
             touch .env 
             # Наполнит файл переменными окружения из секретов GitHub
