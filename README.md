@@ -1,8 +1,8 @@
+[![Yamdb-app Actions Status](https://github.com/devgomax/yamdb_final/workflows/Yamdb-app/badge.svg)](https://github.com/devgomax/yamdb_final/actions)
+
 # yamdb_final
 yamdb_final
 ## Author: @devgomax
-
-[![Yamdb-app Actions Status](https://github.com/devgomax/yamdb_final/workflows/Yamdb-app/badge.svg)](https://github.com/devgomax/yamdb_final/actions)
 
 ### Small website that allows people to rate films, read reviews on it, etc.
 ### Server deployment instructions:
