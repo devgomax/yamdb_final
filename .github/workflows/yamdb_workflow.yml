@@ -41,7 +41,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb-web:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb-web:v1
 
   deploy:
     runs-on: ubuntu-latest
@@ -59,7 +59,7 @@ jobs:
         script: |
             sudo docker-compose stop
             sudo docker-compose rm web
-            sudo docker rmi -f ${{ secrets.DOCKER_USERNAME }}/yamdb-web:latest
+            sudo docker rmi -f ${{ secrets.DOCKER_USERNAME }}/yamdb-web:v1
             # Создаст файл для переменных окружения
             touch .env 
             # Наполнит файл переменными окружения из секретов GitHub
@@ -70,6 +70,7 @@ jobs:
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             sudo docker-compose up -d --build --force-recreate
+            sudo docker-compose exec -T web python manage.py makemigrations users
             sudo docker-compose exec -T web python manage.py collectstatic --no-input
             sudo docker-compose exec -T web python manage.py makemigrations api
             sudo docker-compose exec -T web python manage.py migrate --noinput
