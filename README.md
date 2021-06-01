@@ -5,9 +5,9 @@ Techs: Postgresql, django + gunicorn, nginx
 ## Author: @devgomax
 
 ### Small website that allows people to rate films, read reviews on it, etc.
-P.s. проблемы с деплоем на ту же виртуалку, где делал предыдущие спринты, поэтому ссылку на сайт не предоставлю)). Исправлено все - от и до, но возникли различные конфликты при настройке nginx, gunicorn и тд (остались какие-то хвосты от предыдущих развернутых проектов). Создавать новую виртуалку ради поднятия этого проекта не хочется, т.к. потом может не хватить ресурсов на дипломную работу. Если по коду все ок, огромная просьба - принять этот проект (предыдущий проект настраивал без проблем со статикой).
+P.s. сайт работает на порту 8000, хотя все вроде бы настроено верно (+ не подгружается статика).
 
-## Website - www.sprint17.gq
+## Website - www.sprint17.gq:8000
 
 ### Server deployment instructions:
 - create ```.env``` file to the project's root directory with the next lines:
