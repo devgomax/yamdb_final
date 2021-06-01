@@ -16,7 +16,7 @@ services:
     image: devgomax/yamdb-web:v1
     restart: always
     ports:
-      - "8000"
+      - "8000:8000"
     volumes:
       - static_value:/code/static/
       - media_value:/code/media/
