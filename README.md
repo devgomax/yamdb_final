@@ -5,9 +5,8 @@ Techs: Postgresql, django + gunicorn, nginx
 ## Author: @devgomax
 
 ### Small website that allows people to rate films, read reviews on it, etc.
-P.s. сайт работает на порту 8000, хотя все вроде бы настроено верно (+ не подгружается статика).
 
-## Website - www.sprint17.gq:8000
+## Website - www.sprint17.gq/api/v1
 
 ### Server deployment instructions:
 - create ```.env``` file to the project's root directory with the next lines:
