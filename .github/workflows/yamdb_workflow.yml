@@ -60,6 +60,7 @@ jobs:
             cd yamdb_final
             sudo docker-compose stop
             sudo docker-compose rm web
+            sudo docker rmi ${{ secrets.DOCKER_USERNAME }}/yamdb-web:v1
             # Создаст файл для переменных окружения
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
